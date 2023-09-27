@@ -1,2 +1,5 @@
 # GF_GAD
 Graph Filtering for Graph Anomaly Detection (GF-GAD)
+
+
+Identification of anomalies on graphs has become a topic of significant interest due to widespread applications in various fields, such as intrusion detection in computer networks, fault detection and event detection in environmental monitoring, and fraud detection in finance. Existing methods for graph anomaly detection approach the problem from the spatial domain, such as Graph neural networks (GNNs). Recent work has shown that conventional GNNs may not be optimal for anomaly detection as they suffer from the over-smoothing problem as they aggregate information from the node neighborhoods, which averages the attributes of anomalies and makes them less distinguishable. To address this issue, in this paper, we propose a graph signal processing (GSP) based framework to learn the optimal spectral graph filter for anomaly detection. The proposed formulation relies on the assumption that the anomalies are sparse and the normal activity is smooth with respect to the underlying graph.  The proposed method is evaluated on both simulated and real-world networks with anomalous node attributes.
