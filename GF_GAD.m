@@ -27,8 +27,6 @@ Ln = eye(N)-An;   % normalized Laplacian
 D=diag(d);
 
 
-anomal=find(GT==0);   % truth anomalous nodes
-
 %%%  t-th shifted input signal as S(t) := U'*D^t*U'*F
 for t=1:T
 zt{t}=U*d^(t-1)*U'*f;
@@ -93,7 +91,7 @@ for n=1:40
 
     %%% V^(k+1) update using V^k, Z^(k+1), and c^(k+1)
     V_new=V+rho*(B-(eye(N)-U*H*U')*f);
-    if norm(abs(h_new)-abs(h))<10^-3
+    if norm(h_new-h)<10^-3
         break
     end
     h=h_new;
